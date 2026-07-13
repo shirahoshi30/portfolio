@@ -1,0 +1,576 @@
+/*========================================================
+
+SAKURA SECURE
+Portfolio by Gracy Titung
+
+Global Styles
+
+========================================================*/
+
+/*====================
+Google Fonts Used
+
+Allura
+Cormorant Garamond
+Outfit
+Inter
+
+=====================*/
+
+
+:root{
+
+/* Background */
+
+--cream:#FFFDF8;
+
+/* Pink */
+
+--blush:#F4DFE6;
+
+--rose:#B95E84;
+
+/* Green */
+
+--hover:#E8EFCF;
+
+--sage:#97A13B;
+
+--citron:#C5CC82;
+
+/* Blue */
+
+--azure:#D6E6E7;
+
+/* Text */
+
+--text:#4A4542;
+
+--light-text:#6F6A65;
+
+/* Shadows */
+
+--shadow-soft:0 15px 40px rgba(0,0,0,.05);
+
+--shadow-card:0 25px 55px rgba(151,161,59,.10);
+
+--transition:.35s ease;
+
+}
+
+
+/*====================
+
+RESET
+
+=====================*/
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:var(--cream);
+
+font-family:'Inter',sans-serif;
+
+color:var(--text);
+
+overflow-x:hidden;
+
+position:relative;
+
+}
+
+
+/*====================
+
+Selection
+
+=====================*/
+
+::selection{
+
+background:var(--rose);
+
+color:white;
+
+}
+
+
+/*====================
+
+Scrollbar
+
+=====================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#faf8f4;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#d6d8a5;
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--sage);
+
+}
+
+
+/*====================
+
+Typography
+
+=====================*/
+
+h1,h2,h3,h4{
+
+font-family:'Cormorant Garamond',serif;
+
+font-weight:600;
+
+color:var(--sage);
+
+}
+
+p{
+
+font-family:'Inter',sans-serif;
+
+line-height:1.8;
+
+color:var(--light-text);
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+
+/*====================
+
+Sections
+
+=====================*/
+
+section{
+
+width:100%;
+
+padding:120px 8%;
+
+position:relative;
+
+}
+
+
+/*====================
+
+Containers
+
+=====================*/
+
+.container{
+
+width:min(1200px,100%);
+
+margin:auto;
+
+}
+
+
+/*====================
+
+Images
+
+=====================*/
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+
+/*====================
+
+Buttons
+
+=====================*/
+
+.primary-btn,
+.secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 32px;
+    border-radius:999px;
+    font-family:'Outfit',sans-serif;
+    font-weight:600;
+    transition:all .35s ease;
+}
+
+.primary-btn{
+    background:linear-gradient(135deg,#D484A6,#B95E84);
+    color:white;
+    box-shadow:0 15px 35px rgba(185,94,132,.25);
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 25px 45px rgba(185,94,132,.35);
+}
+
+.primary-btn i{
+    transition:.3s;
+}
+
+.primary-btn:hover i{
+    transform:translateX(5px);
+}
+
+.secondary-btn{
+    background:white;
+    border:2px solid var(--citron);
+    color:var(--sage);
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.secondary-btn:hover{
+    background:var(--hover);
+    color:var(--rose);
+    transform:translateY(-5px);
+}
+
+.secondary-btn i{
+    transition:.3s;
+}
+
+.secondary-btn:hover i{
+    transform:translateY(2px);
+}
+
+/*====================
+
+Glass Card
+
+=====================*/
+
+.glass{
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.5);
+
+border-radius:28px;
+
+box-shadow:var(--shadow-card);
+
+}
+
+
+/*====================
+
+Background Blur
+
+=====================*/
+
+.bg-blur{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+z-index:-1;
+
+opacity:.6;
+
+}
+
+.blur-one{
+
+width:420px;
+
+height:420px;
+
+background:#f8d7e6;
+
+top:-120px;
+
+left:-120px;
+
+}
+
+.blur-two{
+
+width:350px;
+
+height:350px;
+
+background:#edf5d8;
+
+right:-80px;
+
+bottom:50px;
+
+}
+
+
+/*====================
+
+Flower Decorations
+
+=====================*/
+
+.flower{
+
+position:absolute;
+
+pointer-events:none;
+
+opacity:.18;
+
+z-index:-1;
+
+}
+
+.flower-top{
+
+top:0;
+
+right:0;
+
+width:280px;
+
+height:280px;
+
+background:radial-gradient(circle,var(--blush),transparent 70%);
+
+}
+
+.flower-bottom{
+
+left:-120px;
+
+bottom:-100px;
+
+width:300px;
+
+height:300px;
+
+background:radial-gradient(circle,#E8EFCF,transparent 70%);
+
+}
+
+
+/*====================
+
+Fade Animation
+
+=====================*/
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.8s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+/*====================
+
+Utility
+
+=====================*/
+
+.text-center{
+
+text-align:center;
+
+}
+
+.mt-2{
+
+margin-top:20px;
+
+}
+
+.mt-4{
+
+margin-top:40px;
+
+}
+
+.mt-6{
+
+margin-top:60px;
+
+}
+
+/*==========================================================
+                SIGNATURE DIVIDER
+==========================================================*/
+
+.section-divider{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin:28px auto;
+
+}
+
+.divider-line{
+
+    width:130px;
+
+    height:2px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(151,161,59,.75),
+        transparent
+    );
+
+}
+
+.divider-icon{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(244,223,230,.45);
+
+    border:1px solid rgba(151,161,59,.22);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 8px 20px rgba(185,94,132,.10),
+        0 4px 12px rgba(151,161,59,.08);
+
+    transition:.35s ease;
+
+}
+
+.divider-icon svg{
+
+    width:18px;
+
+    height:18px;
+
+    color:var(--rose);
+
+    animation:sparkle 3s ease-in-out infinite;
+
+}
+
+.section-divider:hover .divider-icon{
+
+    transform:rotate(12deg) scale(1.08);
+
+    background:rgba(232,239,207,.55);
+
+}
+
+.section-divider:hover .divider-icon svg{
+
+    color:var(--sage);
+
+}
+
+@keyframes sparkle{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.9;
+
+    }
+
+    50%{
+
+        transform:scale(1.18);
+
+        opacity:1;
+
+    }
+
+}
+
+.section-subtitle{
+    font-family: "Allura", cursive;
+    font-size: clamp(3rem, 4vw, 4.2rem)!important;
+    color: var(--rose);
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+

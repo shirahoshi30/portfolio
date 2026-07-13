@@ -1,0 +1,457 @@
+/*==========================================================
+                    ABOUT SECTION
+==========================================================*/
+
+.about{
+    position: relative;
+    padding: 70px 8%;
+    overflow: hidden;
+}
+/* Section Heading */
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-subtitle{
+    font-family: 'Allura', cursive;
+    font-size: 42px;
+    color: var(--rose);
+    margin-bottom: 10px;
+}
+
+.section-heading h2{
+    font-size: 56px;
+    color: var(--sage);
+}
+
+/* Main Layout */
+
+.about-container{
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr .9fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+/* Left Side */
+
+.about-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-left h3{
+    font-size: 42px;
+    line-height: 1.3;
+    color: var(--text);
+    margin-bottom: 28px;
+    max-width: 650px;
+}
+
+.about-left p{
+    font-size: 17px;
+    line-height: 2;
+    color: var(--light-text);
+    margin-bottom: 22px;
+    max-width: 670px;
+}
+
+/* Right Side */
+
+.journey-card{
+    width:100%;
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .about-left{
+
+        order:2;
+
+    }
+
+    .journey-card{
+
+        order:1;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .about{
+
+        padding:100px 7%;
+
+    }
+
+    .section-heading h2{
+
+        font-size:42px;
+
+    }
+
+    .about-left h3{
+
+        font-size:34px;
+
+    }
+
+    .about-left p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/*=========================================
+        QUICK SNAPSHOT
+=========================================*/
+
+.glance-card{
+
+    padding:35px;
+
+    border-radius:30px;
+
+}
+
+.glance-card h3{
+
+    font-size:32px;
+
+    color:var(--sage);
+
+    margin-bottom:30px;
+
+}
+
+/* Each Row */
+
+.glance-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(151,161,59,.12);
+
+    transition:.35s ease;
+
+}
+
+.glance-item:last-child{
+
+    border:none;
+
+}
+
+.glance-item:hover{
+
+    transform:translateX(8px);
+
+}
+
+/* Icon Box */
+
+.glance-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:16px;
+
+    background:var(--hover);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    transition:.35s ease;
+
+}
+
+.glance-icon svg{
+
+    width:22px;
+
+    height:22px;
+
+    color:var(--sage);
+
+    transition:.35s ease;
+
+}
+
+/* Hover */
+
+.glance-item:hover .glance-icon{
+
+    background:var(--blush);
+
+    transform:rotate(-10deg);
+
+}
+
+.glance-item:hover .glance-icon svg{
+
+    color:var(--rose);
+
+    transform:scale(1.12);
+
+}
+
+/* Text */
+
+.glance-item h4{
+
+    font-size:18px;
+
+    color:var(--text);
+
+    margin-bottom:4px;
+
+    transition:.35s;
+
+}
+
+.glance-item:hover h4{
+
+    color:var(--sage);
+
+}
+
+.glance-item p{
+
+    font-size:15px;
+
+    color:var(--light-text);
+
+}
+
+/*==========================================================
+                    CORE VALUES
+==========================================================*/
+
+.values-section{
+
+    margin-top:80px;
+
+}
+
+.values-heading{
+    font-family:'Cormorant Garamond', serif !important;
+    font-size:2rem !important;
+    color:var(--sage) !important;
+    text-align:center !important;
+    position:relative !important;
+}
+
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.value-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.05);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 30px 60px rgba(151,161,59,.15);
+
+}
+
+.value-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--rose),
+        var(--sage)
+    );
+
+}
+
+.value-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    margin-bottom:22px;
+
+    border-radius:22px;
+
+    background:var(--hover);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+
+.value-card:hover .value-icon{
+
+    background:var(--blush);
+
+    transform:rotate(-8deg) scale(1.05);
+
+}
+
+.value-icon svg{
+
+    width:30px;
+
+    height:30px;
+
+    color:var(--sage);
+
+}
+
+.value-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+    color:var(--text);
+
+}
+
+.value-card p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:var(--light-text);
+
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.values-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.values-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*==========================
+Signature
+==========================*/
+
+.signature{
+
+margin-top:45px;
+
+}
+
+.signature p{
+
+font-size:16px;
+
+color:var(--light-text);
+
+font-style:italic;
+
+margin-bottom:6px;
+
+}
+
+.signature span{
+
+font-family:'Allura',cursive;
+
+font-size:52px;
+
+color:var(--rose);
+
+display:inline-block;
+
+transform:rotate(-4deg);
+
+}
